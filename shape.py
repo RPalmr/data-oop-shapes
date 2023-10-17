@@ -5,8 +5,8 @@
 PI = 3.14
 
 ### Classes and Methods
-#### Shape Class
 class Shape:
+    """class shape"""
     def __init__(self, color, name):
         self.color = color
         self.name = name
@@ -14,8 +14,12 @@ class Shape:
     def say_name(self):
         return f"My name is {self.name}"
 
-#### Rectangle Class
+    def say_color(self):
+        """ Prints the color fo the shape"""
+        return f"My name is {self.color}"
+
 class Rectangle(Shape):
+    """class rectangle"""
     def __init__(self, color, name, width, height):
         super().__init__(color, name)
         self.width = width
@@ -34,8 +38,8 @@ class Rectangle(Shape):
         """Calculates and returns the perimeter of the rectangle."""
         return 2 * (self.width + self.height)
 
-#### Circle Class
 class Circle(Shape):
+    """class circle"""
     def __init__(self, color, name, radius):
         super().__init__(color, name)
         self.radius = radius
